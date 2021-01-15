@@ -8,6 +8,7 @@
 <body>
   <main id="main_registration">
     <section id="registration_container">
+      <header><h1>Sign Up</h1></header>
       <form action="" method="POST" id="user_registration">
         <label>Firstname</label>
         <input type='text' name='txt_fname' id='txt_fname' pattern='[a-zA-Z]+[a-zA-Z ]' minlength='2' maxlength='26' required />
@@ -19,6 +20,9 @@
         <input type='password' name='txt_password' id='txt_password' pattern='^[a-zA-Z0-9@#&_]+' minlength='8' maxlength='32' required />
       </form>
     </section>
+    <div>
+      <a href='index.php' >Login</a>
+    </div>
   </main>
 </body>
 </html>

@@ -17,6 +17,9 @@
           <input type="password" id="txt_password" name="txt_password" required />
         </section>
       </form>
+      <div>
+        <a href='signup.php' >Register</a>
+      </div>
     </section>
   </main>
 </body>
