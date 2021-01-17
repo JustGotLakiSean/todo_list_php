@@ -13,19 +13,27 @@
 <body>
   <main id="main_registration">
     <section id="registration_container">
-      <header id="registration_header">
-        <h1 id="registration_title">Sign Up</h1>
-      </header>
+      <h1 id="registration_title">Sign Up</h1>
       <form action="" method="POST" id="user_registration">
-        <label for='txt_fname'>Firstname</label>
-        <input type='text' name='txt_fname' id='txt_fname' pattern='[a-zA-Z]+[a-zA-Z ]' minlength='2' maxlength='26' required />
-        <label for='txt_lname'>Lastname</label>
-        <input type='text' name='txt_lname' id='txt_lname' pattern='[a-ZA-Z]+[a-zA-Z ]' minlength='2' maxlength='26' required />
-        <label for='txt_username'>Username</label>
-        <input type='text' name='txt_username' id='txt_username' pattern='[a-zA-Z]+[a-zA-Z0-9_]+' minlength='5' maxlength='15' required />
-        <label for='txt_password'>Password</label>
-        <input type='password' name='txt_password' id='txt_password' pattern='^[a-zA-Z0-9@#&_]+' minlength='8' maxlength='32' required />
-        <input type='submit' name='btn_register' id="btn_register" value='Sign Up' />
+        <div class='input-group'>
+          <label for='txt_fname'>Firstname</label>
+          <input type='text' name='txt_fname' id='txt_fname' pattern='[a-zA-Z]+[a-zA-Z ]' minlength='2' maxlength='26' required />
+        </div>
+        <div class='input-group'>
+          <label for='txt_lname'>Lastname</label>
+          <input type='text' name='txt_lname' id='txt_lname' pattern='[a-ZA-Z]+[a-zA-Z ]' minlength='2' maxlength='26' required />
+        </div>
+        <div class='input-group'>
+          <label for='txt_username'>Username</label>
+          <input type='text' name='txt_username' id='txt_username' pattern='[a-zA-Z]+[a-zA-Z0-9_]+' minlength='5' maxlength='15' required />
+        </div>
+        <div class='input-group'>
+          <label for='txt_password'>Password</label>
+          <input type='password' name='txt_password' id='txt_password' pattern='^[a-zA-Z0-9@#&_]+' minlength='8' maxlength='32' required />
+        </div>
+        <button type='submit' name='btn_register' id="btn_register">
+          Sign Up
+        </button>
       </form>
       <div>
         <a href='index.php'>Login</a>
