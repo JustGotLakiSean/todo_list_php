@@ -13,8 +13,8 @@
 <body>
   <main id="main_registration">
     <section id="registration_container">
-      <h1 id="registration_title">Sign Up</h1>
       <form action="" method="POST" id="user_registration">
+        <h1 id="registration_title">Sign Up</h1>
         <div class='input-group'>
           <label for='txt_fname'>Firstname</label>
           <input type='text' name='txt_fname' id='txt_fname' pattern='[a-zA-Z]+[a-zA-Z ]' minlength='2' maxlength='26' required />
@@ -35,8 +35,8 @@
           Sign Up
         </button>
       </form>
-      <div>
-        <a href='index.php'>Login</a>
+      <div id="back_link_container">
+        <a href='index.php' id="back_link_login">Sign In</a>
       </div>
     </section>
   </main>
