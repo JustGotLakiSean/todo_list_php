@@ -15,11 +15,11 @@
     <section id="login_container">
       <form action="" method="POST" id="user_login">
         <h1 id="login_title">Sign Up</h1>
-        <div class='inner-group'>
+        <div class='input-group'>
           <label for="txt_username">Username</label>
           <input type="text" id="txt_username" name="txt_username" required />
         </div>
-        <div class='inner-group'>
+        <div class='input-group'>
           <label for="txt_password">Password</label>
           <input type="password" id="txt_password" name="txt_password" required />
         </div>
