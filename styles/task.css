@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #323c49;
+  font-family: 'Roboto';
+}
+
+#inbox_container {
+  height: auto;
+  width: 390px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 1px 0px 24px #00000044;
+  margin: auto;
+}
+
+#task_title {
+  font-size: 40px;
+  margin: 10px 0 10px 0;
+  color:#323c49;
+}
+
+#task_form {
+  margin: auto;
+  margin-bottom: 18px;
+  width: 360px;
+}
+
+#link_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 120px;
+  height: auto;
+}
+
+#link_container a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#task_link {
+  color: #00b9ff;
+}
+
+#task_underline {
+  height: 3px;
+  width: 45px;
+  background: #00b9ff;
+}
+
+#done_link {
+  color: #c1c1c1;
+}
+
+#task_group {
+  height: auto;
+}
+
+#txt_task {
+  height: 32px;
+  width: 320px;
+  margin: 10px 0 10px 0;
+  border: 2px solid #00b9ff;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'Roboto';
+  color: #323c49;
+}
+
+#txt_task::placeholder {
+  color: #c1c1c1;
+}
+
+#btn_add_task {
+  height: 32px;
+  width: 36px;
+  border: 0;
+  padding: 0px;
+  font-size: 20px;
+  font-weight: bold;
+  background: #00b9ff;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}
