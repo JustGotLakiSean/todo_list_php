@@ -14,6 +14,7 @@
 <body>
   <main id="main_registration">
     <?php echo $username_already_exist_err; ?>
+    <?php echo $user_registration_success; ?>
     <section id="registration_container">
       <form action="" method="POST" id="user_registration">
         <h1 id="registration_title">Sign Up</h1>

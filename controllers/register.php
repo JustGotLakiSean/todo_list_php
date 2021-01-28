@@ -50,13 +50,17 @@ if(isset($_POST['btn_register'])){
       $_username = mysqli_real_escape_string($con, $txt_username);
       $_password = mysqli_real_escape_string($con, $txt_password);
 
-      $sql = $connection->registerUser($_username, $_password, $_firstname, $_lastname);
+      $sql = $connection->registerUser($_username, $_password, ucwords($_firstname), ucwords($_lastname));
       if($sql){
-        header('location: ./signup.php');
+        $user_registration_success = '<div class="message_box" onclick="this.style.display = \'none\';">
+      <p class="message">User registration success.</p>
+      <p class="click_to_close">(Click to close)</p>
+      </div>';
+        header('location: ./success_register.html');
+        // exit();
       } else {
         printf("%s\n", $connection->error);
       }
     }
   }
 }
-?>

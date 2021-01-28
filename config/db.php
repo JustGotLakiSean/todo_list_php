@@ -27,7 +27,7 @@ class db {
     $password_hash = password_hash($userpass, PASSWORD_BCRYPT);
     $con = $this->getConnection();
     $sql_query = "INSERT INTO tbl_users(username, userpass, userfname, userlname)
-    VALUES('{$username}', '{$password_hash}', '{$userfname}', '{$userlname}')";
+    VALUES('$username', '{$password_hash}', '{$userfname}', '{$userlname}')";
     $sql = $con->query($sql_query);
     if($sql){
       return true;
