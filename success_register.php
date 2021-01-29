@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,20 @@
     <?php include 'styles/styles.css'; ?>
   </style>
 </head>
+
 <body>
   <main id="message_main">
-    <section id="message_section">
+    <section id="message_section" align='center'>
       <div id="message_container">
-        <div>
-          <h1>Welcome, User.</h1>
+        <div id="message_success_container">
+          <h1 id="message_success">Welcome, User.</h1>
         </div>
-        <div>
-          <a href="index.php">Click to Login</a>
+        <div id="click_to_login_container">
+          <a href="index.php" id="click_to_login">Click to Login</a>
         </div>
       </div>
     </section>
   </main>
 </body>
+
 </html>

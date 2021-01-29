@@ -36,5 +36,18 @@ class db {
     }
   }
 
+  public function loginUser($username, $password)
+  {
+    $con = $this->getConnection();
+    $sql_query = "SELECT username, userpass FROM tbl_users WHERE username = '{$username}' AND userpass = '{$password}'";
+    $sql = $con->query($sql_query);
+    if($sql)
+    {
+      return $sql;
+    } else {
+      return mysqli_error($con);
+    }
+  }
+
 }
 ?>

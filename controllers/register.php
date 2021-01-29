@@ -56,7 +56,7 @@ if(isset($_POST['btn_register'])){
       <p class="message">User registration success.</p>
       <p class="click_to_close">(Click to close)</p>
       </div>';
-        header('location: ./success_register.html');
+        header('location: ./success_register.php');
         // exit();
       } else {
         printf("%s\n", $connection->error);
