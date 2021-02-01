@@ -27,7 +27,7 @@ class db {
     $password_hash = password_hash($userpass, PASSWORD_BCRYPT);
     $con = $this->getConnection();
     $sql_query = "INSERT INTO tbl_users(username, userpass, userfname, userlname)
-    VALUES('$username', '{$password_hash}', '{$userfname}', '{$userlname}')";
+    VALUES('{$username}', '{$password_hash}', '{$userfname}', '{$userlname}')";
     $sql = $con->query($sql_query);
     if($sql){
       return true;
@@ -36,10 +36,10 @@ class db {
     }
   }
 
-  public function loginUser($username, $password)
+  public function loginUser($username)
   {
     $con = $this->getConnection();
-    $sql_query = "SELECT username, userpass FROM tbl_users WHERE username = '{$username}' AND userpass = '{$password}'";
+    $sql_query = "SELECT * FROM tbl_users WHERE username = '{$username}'";
     $sql = $con->query($sql_query);
     if($sql)
     {

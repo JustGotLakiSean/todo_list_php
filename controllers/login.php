@@ -28,16 +28,15 @@ if(isset($_POST['btn_login']))
   // Check if data form is empty
   if(!empty($post_username) && !empty($post_password))
   {
-    $select_username_query = "SELECT username FROM tbl_users WHERE username = '{$post_username}'";
-    $check_username = mysqli_query($con, $select_username_query);
+    $select_username_query = mysqli_query($con, "SELECT username FROM tbl_users WHERE username = '{$post_username}'");
+    $check_username = mysqli_num_rows($select_username_query);
 
     // check if username registered
     if($check_username <= 0) // if not registered
     {
       $username_does_not_exist_err = '<div class="message_box">
       <p class="message">Username does not registered.</p>
-      <p class="click_to_close">(Click to close)</p>
-      </div>';
+      <p class="click_to_close">(Click to close)</p></div>';
     } else {
       // Fetch user data
       while($row = $sql->fetch_array(MYSQLI_ASSOC))
@@ -46,7 +45,7 @@ if(isset($_POST['btn_login']))
         $firstname = $row['userfname'];
         $lastname = $row['userlname'];
         $username = $row['username'];
-        $_password = $row['password'];
+        $_password = $row['userpass'];
       }
 
       // Verify password
@@ -67,7 +66,7 @@ if(isset($_POST['btn_login']))
         <p class="click_to_close">(Click to close)</p>
         </div>';
       }
-      
+
     }
   } else {
     if(empty($post_username)){

@@ -19,7 +19,7 @@ if(isset($_POST['btn_register'])){
   $_firstname = "";
   $_lastname = "";
   $_username = "";
-  $_password = "";
+  $_lastname = "";
 
   // declare variables for the input data to retain then if there is an error
   $r_firstname = "";
@@ -57,6 +57,11 @@ if(isset($_POST['btn_register'])){
       <p class="click_to_close">(Click to close)</p>
       </div>';
         header('location: ./success_register.php');
+        session_start(0);
+        $_SESSION['firstname'] = $_firstname;
+        $_SESSION['lastname'] = $_lastname;
+        $_SESSION['username'] = $_username;
+        $_SESSION['password'] = $_password;
         // exit();
       } else {
         printf("%s\n", $connection->error);

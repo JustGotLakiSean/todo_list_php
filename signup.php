@@ -24,7 +24,7 @@
         if($err_count === 1){
           echo "<div class='input-group'>
           <label for='txt_fname'>Firstname</label>
-          <input type='text' name='txt_fname' id='txt_fname' pattern='[a-zA-Z]+[a-zA-Z ]' minlength='2' maxlength='26' value=$r_firstname/>
+          <input type='text' name='txt_fname' id='txt_fname' pattern='[a-zA-Z]+[a-zA-Z ]' minlength='2' maxlength='26' value=$r_firstname />
         </div>
         <div class='input-group'>
           <label for='txt_lname'>Lastname</label>
@@ -56,7 +56,7 @@
         </div>
         <div class='input-group'>
           <label for='txt_password'>Password</label>
-          <input type='password' name='txt_password' id='txt_password' pattern='^[a-zA-Z0-9@#&_]+' minlength='8' maxlength='32' required />
+          <input type='text' name='txt_password' id='txt_password' pattern='^[a-zA-Z0-9@#&_]+' minlength='8' maxlength='32' required />
         </div>
         <button type='submit' name='btn_register' id='btn_register'>
           Sign Up
