@@ -1,3 +1,7 @@
+<?php
+session_start();
+include('./controllers/task.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +30,11 @@
         </div>
 
         <div id="task_group">
-          <input type="text" name="txt_task" id="txt_task" placeholder="Add new item" />
+          <input type="text" name="txt_task" id="txt_task" placeholder="Add new item" required />
+          <input type="hidden" name = "txt_date_added" id="txt_date_added" value="<?=date("Y-m-d");?>" />
+          <input type="hidden" name = "txt_date_completed" id="txt_date_completed" value="<?=date("Y-m-d");?>" />
+          <input type="hidden" name="txt_taskby_uid" id="txt_taskby_uid" value="<?=$_SESSION['uid'];?>" />
+          <input type="hidden" name="txt_taskby_username" id="txt_taskby_username" value="<?=$_SESSION['username'];?>" />
           <input type="submit" name="btn_add_task" id="btn_add_task" value="+" />
         </div>
 

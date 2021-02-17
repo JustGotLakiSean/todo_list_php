@@ -49,5 +49,19 @@ class db {
     }
   }
 
+  public function addTask($taskby_uid, $taskby_username, $task_name, $is_task_completed, $date_added, $date_completed, $show_completed_task, $task_deleted)
+  {
+    $con = $this->getConnection();
+    $sql_query = "INSERT INTO tbl_todo(taskby_uid, taskby_username, task_name, is_task_completed, date_added, date_completed, show_completed_task, task_deleted)
+    VALUES('{$taskby_uid}', '{$taskby_username}', '{$task_name}', '{$is_task_completed}', '{$date_added}', '{$date_completed}', '{$show_completed_task}', '{$task_deleted}')";
+    $sql = $con->query($sql_query);
+    if($sql)
+    {
+      return true;
+    } else {
+      return mysqli_error($con);
+    }
+  }
+
 }
 ?>
