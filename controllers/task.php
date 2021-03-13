@@ -35,7 +35,7 @@ if(isset($_POST['btn_add_task']))
     $date_added = date("F j, y");
     $date_completed = "0";
     $show_completed_task = 1; // display the completed task by default if it's completed
-    $task_deleted = 1; // data still in the db by default
+    $task_deleted = 0; // data still in the db by default
 
     $sql = $connection->addTask($_txt_taskby_uid, $_txt_taskby_username, $_txt_task, $is_task_completed, $_txt_date_added, $_txt_date_completed, $show_completed_task, $task_deleted);
     if($sql){

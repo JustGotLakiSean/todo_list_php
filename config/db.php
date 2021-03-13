@@ -63,5 +63,17 @@ class db {
     }
   }
 
+  public function displayTask($taskby_uid, $taskby_username)
+  {
+    $con = $this->getConnection();
+    $sql_query = "SELECT * FROM tbl_todo WHERE taskby_uid = '{$taskby_uid}' AND taskby_username = '{$taskby_username}'";
+    $sql = $con->query($sql_query);
+    if($sql) {
+      return $sql;
+    } else {
+      return mysqli_error($con);
+    }
+  }
+
 }
 ?>
